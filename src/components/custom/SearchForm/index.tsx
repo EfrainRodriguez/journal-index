@@ -50,12 +50,12 @@ const SearchForm = ({
       >
         <FormField
           control={form.control}
-          name="issn"
+          name="name"
           render={({ field }) => (
             <FormItem className="md:flex-1">
               <FormControl>
                 <Input
-                  placeholder="ISSN de la revista"
+                  placeholder="Nombre de la revista"
                   {...field}
                   ref={inputRef}
                 />
@@ -66,11 +66,11 @@ const SearchForm = ({
         />
         <FormField
           control={form.control}
-          name="name"
+          name="issn"
           render={({ field }) => (
             <FormItem className="md:flex-1">
               <FormControl>
-                <Input placeholder="Nombre de la revista" {...field} />
+                <Input placeholder="ISSN de la revista" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -91,7 +91,7 @@ const SearchForm = ({
               d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
             />
           </svg>
-          Buscar {loading && <Spinner className="ml-3" />}
+          Buscar {loading && <Spinner className="ml-3 w-10 h-10" />}
         </Button>
       </form>
     </Form>
